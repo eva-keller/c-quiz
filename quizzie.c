@@ -5,10 +5,8 @@
 #define MAX_QUESTION 256
 #define MAX_ANSWER 128
 
-// Total number of questions in the quiz.
 #define TOTAL_QUESTIONS 5
 
-// Define a struct for representing quiz questions.  
 typedef struct
 {
   char question[MAX_QUESTION];
@@ -21,7 +19,7 @@ typedef struct
 
 int main(void)
 {
-  // Declare an array of question structs to store all the data to represent our quiz.
+  
   quiz_question quiz[TOTAL_QUESTIONS];
   
 
@@ -62,19 +60,14 @@ int main(void)
   strcpy(quiz[4].answerD, "Bojack Horseman");
   quiz[4].correct_answer = 'B';
 
-  // Declare variable to store the total number of questions answered correctly
   double total_correct = 0;
   
-  // Declare variable to store the answers entered by the user
   char answer;
   
-  // Loop with counter variable
   for (int i = 0; i < TOTAL_QUESTIONS; i++)
   {
-    // Output the question
     printf("Question %d: %s\n\n", (i+1), quiz[i].question);
     
-    // Output the possible answers as a menu of options A,B,C, or D
     printf("A) %s\n", quiz[i].answerA);
     printf("B) %s\n", quiz[i].answerB);
     printf("C) %s\n", quiz[i].answerC);
